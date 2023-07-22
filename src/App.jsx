@@ -6,7 +6,6 @@ import {
   Feed,
   ChannelDetail,
   SearchFeed,
-  SearchBar,
 } from "./components";
 function App() {
   return (
