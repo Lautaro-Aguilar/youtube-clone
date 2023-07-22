@@ -12,7 +12,6 @@ const ChannelDetail = () => {
   const [videos, setVideos] = useState([]);
   const { id } = useParams();
 
-  console.log(channelDetail, videos);
   useEffect(() => {
     fetchFromAPI(`channels?part=snippet&id=${id}`).then((data) =>
       setChannelDetail(data?.items[0])
@@ -22,7 +21,7 @@ const ChannelDetail = () => {
       (data) => setVideos(data?.items)
     );
   }, [id]);
-  console.log(channelDetail?.snippet?.thumbnails?.high.url);
+
   return (
     <Box minHeight='96vh'>
       <Box>
